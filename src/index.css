@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-ink: #0F0F0E;
+  --color-text-2: #4B4B47;
+  --color-text-3: #8E8D89;
+  --color-text-4: #BDBCB8;
+  --color-line: #E8E6E1;
+  --color-line-strong: #C8C6BF;
+  --color-surface: #FAFAF8;
+  
+  --font-serif: "Newsreader", "Georgia", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFF;
+  color: #0F0F0E;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: "Newsreader", "Georgia", serif;
+}
+
+.font-sans {
+  font-family: "Inter", sans-serif;
+}
+
+.chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4B4B47; /* --text-2 */
+  background: white;
+  border: 1px solid #C8C6BF; /* --line-strong */
+  border-radius: 2px;  /* sharp corners, not pill */
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.chip:hover:not(:disabled) {
+  border-color: #0F0F0E; /* --ink */
+  color: #0F0F0E;
+}
+
+.chip.selected {
+  background: #0F0F0E; /* --ink */
+  color: white;
+  border-color: #0F0F0E;
+}
+
+.chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Trial Card Styling - Exact Specifications */
+.trial {
+  background: white;
+  border: 1px solid #E8E6E1; /* --color-line */
+  border-radius: 0;  /* sharp corners */
+  padding: 28px 32px;
+  text-align: left;
+}
+.trial header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+.trial .meta {
+  font: 12px 'Inter', sans-serif;
+  color: #8E8D89; /* --color-text-3 */
+  font-weight: 400;
+}
+.trial .nct {
+  font: 11px 'Inter', sans-serif;
+  color: #BDBCB8; /* --color-text-4 */
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+.trial .title {
+  font: 22px 'Newsreader', serif;
+  font-weight: 400;
+  color: #0F0F0E; /* --color-ink */
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+.trial .official {
+  font: 12px 'Inter', sans-serif;
+  font-style: italic;
+  color: #8E8D89; /* --color-text-3 */
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+.trial section {
+  margin-bottom: 20px;
+}
+.trial .label {
+  display: block;
+  font: 10px 'Inter', sans-serif;
+  font-weight: 500;
+  color: #8E8D89; /* --color-text-3 */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.trial p, .trial li {
+  font: 14px 'Inter', sans-serif;
+  color: #4B4B47; /* --color-text-2 */
+  line-height: 1.6;
+  margin: 0;
+}
+.trial ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.trial li {
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+.trial li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: #8E8D89; /* --color-text-3 */
+}
+.trial footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #E8E6E1; /* --color-line */
+  display: flex;
+  justify-content: space-between;
+}
+.trial .link {
+  background: none;
+  border: none;
+  font: 13px 'Inter', sans-serif;
+  font-weight: 400;
+  color: #4B4B47; /* --color-text-2 */
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+.trial .link:hover {
+  color: #0F0F0E; /* --color-ink */
+  text-decoration: underline;
+}
+
+/* Packet Active Inverted Style */
+.packet-active {
+  background: #0F0F0E; /* --color-ink */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 2px;
+  font: 13px 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.packet-active:hover {
+  opacity: 0.9;
+}

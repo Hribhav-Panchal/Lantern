@@ -1,0 +1,6 @@
+{
+  "name": "Lantern",
+  "description": "A clinical trial navigation tool for cancer patients and caregivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
